@@ -28,6 +28,11 @@ public class MarsRover {
                     this.direction = "W";
                 }
             }
+            else if (command.equals("R")){
+                if (direction.equals("N")) {
+                    this.direction = "E";
+                }
+            }
         });
     }
 }
