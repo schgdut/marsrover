@@ -198,4 +198,19 @@ public class MarsRoverTest {
         assertThat(marsRover.getCoordinate().getCoordinateY(), is(0));
         assertThat(marsRover.getDirection(), is("S"));
     }
+
+    @Test
+    public void should_init_rover_coordinate_and_direction_given_x0_y0_W() {
+        //given
+        Coordinate coordinate = new Coordinate(0, 0);
+        String direction = "W";
+
+        //when
+        MarsRover marsRover = new MarsRover(coordinate, direction);
+
+        //then
+        assertThat(marsRover.getCoordinate().getCoordinateX(), is(0));
+        assertThat(marsRover.getCoordinate().getCoordinateY(), is(0));
+        assertThat(marsRover.getDirection(), is("W"));
+    }
 }
