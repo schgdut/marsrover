@@ -10,7 +10,7 @@ public class Coordinate {
     }
 
     public int getCoordinateX() {
-        return 0;
+        return coordinateX;
     }
 
     public int getCoordinateY() {
@@ -23,5 +23,9 @@ public class Coordinate {
 
     public void reduceCoordinateY() {
         this.coordinateY = coordinateY - 1;
+    }
+
+    public void increaseCoordinateX() {
+        this.coordinateX = coordinateX + 1;
     }
 }
