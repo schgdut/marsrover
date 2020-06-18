@@ -1,8 +1,10 @@
 package com.twschool.practice;
 
+import java.util.List;
+
 public class MarsRover {
-    private final Coordinate coordinate;
-    private final String direction;
+    private  Coordinate coordinate;
+    private  String direction;
 
     public MarsRover(Coordinate coordinate, String direction) {
         this.coordinate = coordinate;
@@ -14,6 +16,18 @@ public class MarsRover {
     }
 
     public String getDirection() {
-        return "N";
+        return direction;
+    }
+
+    public void execute(List<String> commands) {
+        commands.forEach(command -> {
+            if (command.equals("M")) {
+                coordinate.increaseCoordinateY();
+            }else if (command.equals("L")){
+                if (direction.equals("N")) {
+                    this.direction = "W";
+                }
+            }
+        });
     }
 }

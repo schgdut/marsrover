@@ -1,7 +1,12 @@
 package com.twschool.practice;
 
 public class Coordinate {
+    private int coordinateX;
+    private int coordinateY;
+
     public Coordinate(int coordinateX, int coordinateY) {
+        this.coordinateX = coordinateX;
+        this.coordinateY = coordinateY;
     }
 
     public int getCoordinateX() {
@@ -9,6 +14,11 @@ public class Coordinate {
     }
 
     public int getCoordinateY() {
-        return 0;
+        return coordinateY;
     }
+
+    public void increaseCoordinateY() {
+        this.coordinateY = coordinateY + 1;
+    }
+
 }
