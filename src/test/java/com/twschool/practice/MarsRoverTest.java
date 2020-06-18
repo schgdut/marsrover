@@ -101,7 +101,7 @@ public class MarsRoverTest {
         //then
         assertThat(marsRover.getCoordinate().getCoordinateX(), is(0));
         assertThat(marsRover.getCoordinate().getCoordinateY(), is(1));
-        assertThat(marsRover.getDirection(), is("N"));
+        assertThat(marsRover.getDirection(), is("S"));
     }
 
 }
