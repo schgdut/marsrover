@@ -21,4 +21,7 @@ public class Coordinate {
         this.coordinateY = coordinateY + 1;
     }
 
+    public void reduceCoordinateY() {
+        this.coordinateY = coordinateY - 1;
+    }
 }

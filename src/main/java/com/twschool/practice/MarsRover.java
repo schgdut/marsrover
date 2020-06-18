@@ -20,23 +20,29 @@ public class MarsRover {
     }
 
     public void execute(List<String> commands) {
-        commands.forEach(command -> {
-            if (command.equals("M")) {
-                coordinate.increaseCoordinateY();
-            }else if (command.equals("L")){
-                if (direction.equals("N")) {
-                    this.direction = "W";
-                }else if (direction.equals("S")) {
+        if ("N".equals(direction)) {
+            commands.forEach(command -> {
+                if (command.equals("M")) {
+                    coordinate.increaseCoordinateY();
+                }else if (command.equals("L")) {
+                        this.direction = "W";
+                }else if (command.equals("R")) {
                     this.direction = "E";
                 }
-            }
-            else if (command.equals("R")){
-                if (direction.equals("N")) {
+            });
+        }else if ("S".equals(direction)) {
+            commands.forEach(command -> {
+                if (command.equals("M")) {
+                    coordinate.reduceCoordinateY();
+                }else if (command.equals("L")) {
                     this.direction = "E";
-                }else if (direction.equals("S")) {
+                }else if (command.equals("R")) {
                     this.direction = "W";
                 }
-            }
-        });
+            });
+        }else if ("E".equals(direction)){
+
+        }
+
     }
 }
