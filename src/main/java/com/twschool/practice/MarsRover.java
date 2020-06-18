@@ -50,6 +50,16 @@ public class MarsRover {
                     this.direction = "S";
                 }
             });
+        }else if ("W".equals(direction)){
+            commands.forEach(command -> {
+                if (command.equals("M")) {
+                    coordinate.reduceCoordinateX();
+                }else if (command.equals("L")) {
+                    this.direction = "S";
+                }else if (command.equals("R")) {
+                    this.direction = "N";
+                }
+            });
         }
 
     }

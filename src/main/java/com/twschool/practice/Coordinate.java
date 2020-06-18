@@ -28,4 +28,8 @@ public class Coordinate {
     public void increaseCoordinateX() {
         this.coordinateX = coordinateX + 1;
     }
+
+    public void reduceCoordinateX() {
+        this.coordinateX = coordinateX - 1;
+    }
 }
