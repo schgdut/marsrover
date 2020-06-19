@@ -22,5 +22,14 @@ public class AnswerTest {
         Assert.assertEquals("0A4B",result);
     }
 
+    @Test
+    public void should_return_3A0B_when_compare_with_1234_given_answer_1235() {
+        GameAnswer answer = new GameAnswer("1 2 3 4");
+
+        String result = answer.check("1 2 3 5");
+
+        Assert.assertEquals("3A0B",result);
+    }
+
 
 }
