@@ -76,4 +76,13 @@ public class AnswerTest {
         Assert.assertEquals("1A2B",result);
     }
 
+    @Test
+    public void should_return_1A1B_when_compare_with_1234_given_answer_1563() {
+        GameAnswer answer = new GameAnswer("1 2 3 4");
+
+        String result = answer.check("1 5 6 3");
+
+        Assert.assertEquals("1A1B",result);
+    }
+
 }
