@@ -18,8 +18,10 @@ public class GameAnswer {
         for (int index = 0; index < answerNumbers.size(); index++) {
             if (answerNumbers.get(index).equals(userAnswerNumbers.get(index))){
                 valueAndPositionCorrectCount ++;
+            }else if (answerNumbers.contains(userAnswerNumbers.get(index))){
+                valueIncorrectAndPositionCorrectCount ++;
             }
         }
-        return valueAndPositionCorrectCount + "A0B";
+        return valueAndPositionCorrectCount + "A"+ valueIncorrectAndPositionCorrectCount +"B";
     }
 }
