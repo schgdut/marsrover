@@ -20,6 +20,7 @@ public class MarsRover {
     }
 
     public void execute(List<String> commands) {
+
         if ("N".equals(direction)) {
             commands.forEach(command -> {
                 if (command.equals("M")) {
@@ -63,4 +64,5 @@ public class MarsRover {
         }
 
     }
+
 }
