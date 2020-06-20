@@ -1,8 +1,7 @@
 package com.twschool.practice;
 
-import javafx.beans.binding.StringExpression;
-
 import java.util.Random;
+import java.util.regex.Pattern;
 
 public class GussNumberGenerater {
     private String random;
@@ -20,5 +19,26 @@ public class GussNumberGenerater {
             }
         }
         return random;
+    }
+
+    public  boolean isInteger(String str) {
+        Pattern pattern = Pattern.compile("^[-\\+]?[\\d]*$");
+        return pattern.matcher(str).matches();
+    }
+
+    public static boolean checkDifferent(String iniString) {
+        boolean isbool = false;
+        char[] chars = iniString.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            for (int j = i + 1; j < chars.length; j++) {
+                if (chars[i] == chars[j]) {
+                    isbool = false;
+                    return isbool;
+                } else {
+                    isbool = true;
+                }
+            }
+        }
+        return isbool;
     }
 }
