@@ -19,5 +19,11 @@ public class GuessNumberGeneraterTest {
         Assert.assertEquals(true,isdistinct);
     }
 
-
+    @Test
+    public void should_return_is_digit_true_when_generate_random(){
+        GussNumberGenerater gussNumberGenerater = new GussNumberGenerater();
+        String result = gussNumberGenerater.random();
+        boolean isdigit = gussNumberGenerater.isInteger(result);
+        Assert.assertEquals(true,isdigit);
+    }
 }
