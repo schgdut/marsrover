@@ -1,27 +1,24 @@
 package com.twschool.practice;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class GameAnswer {
-    private final List<String> answerNumbers;
-
-    public GameAnswer(String answerString) {
-        this.answerNumbers = Arrays.asList(answerString.split(" "));
+    private String answerNumbers;
+    public GameAnswer(String answerNumbers) {
+        this.answerNumbers = answerNumbers;
     }
-
-    public String check(String userAnswerString) {
-        List<String> userAnswerNumbers = Arrays.asList(userAnswerString.split(" "));
+    public String check(String userNumbers){
         int valueAndPositionCorrectCount = 0;
         int valueIncorrectAndPositionCorrectCount = 0;
-        for (int index = 0; index < answerNumbers.size(); index++) {
-            if (answerNumbers.get(index).equals(userAnswerNumbers.get(index))){
+        for (int i = 0;i<this.answerNumbers.length();i++){
+            if (String.valueOf(this.answerNumbers.charAt(i)).equals(String.valueOf(userNumbers.charAt(i)))){
                 valueAndPositionCorrectCount ++;
-            }else if (answerNumbers.contains(userAnswerNumbers.get(index))){
-                valueIncorrectAndPositionCorrectCount ++;
+
+            }else if (this.answerNumbers.contains(String.valueOf(userNumbers.charAt(i)))){
+                valueIncorrectAndPositionCorrectCount ++ ;
             }
         }
-        return valueAndPositionCorrectCount + "A"+ valueIncorrectAndPositionCorrectCount +"B";
+        return valueAndPositionCorrectCount+"A"+valueIncorrectAndPositionCorrectCount+"B";
     }
+
 }
+
