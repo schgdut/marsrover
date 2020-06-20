@@ -21,7 +21,7 @@ public class GuessNumberMain {
 
         while(true){
 
-            String str = readDataFromConsole("请连续输入不重复的4个数字：");
+            String str = readDataFromConsole("请连续输入4个不重复的数字：");
 
             isdigit = gussNumberGenerater.isInteger(str);
             isdistinct = gussNumberGenerater.checkDifferent(str);
@@ -38,7 +38,7 @@ public class GuessNumberMain {
                 }
 
             }else{
-                System.out.println("输入有误");
+                System.out.println("输入格式错误");
             }
 
 
